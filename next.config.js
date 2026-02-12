@@ -12,7 +12,10 @@ const nextConfig = {
     remotePatterns: [
       ...[NEXT_PUBLIC_SERVER_URL /* 'https://example.com' */].map((item) => {
         const url = new URL(item)
-
+        console.log(url)
+        console.log(url.hostname)
+        console.log(url.protocol)
+        console.log(NEXT_PUBLIC_SERVER_URL)
         return {
           hostname: url.hostname,
           protocol: url.protocol.replace(':', ''),
